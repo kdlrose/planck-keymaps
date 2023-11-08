@@ -7,7 +7,7 @@ in DFU mode.
 
 ### hardware
 
-![ice cream chillin chillin](https://github.com/sailorfe/planck-layout/blob/main/assets/render.png?raw=true)
+![ice cream chillin chillin](assets/render.png)
 
 Drop + OLK Planck v7, polycarbonate case and steel switch plate, Gateron KS-3
 Milk Yellow Pros
@@ -72,6 +72,6 @@ far.
 
 ## tasks
 
-- [  ] Unicode characters on the symbols layer. All I really want are my em and
+- [] Unicode characters on the symbols layer. All I really want are my em and
   en dashes, and maybe curly quotes.
-- [  ] Trouble shoot layer + mod
+- [] Trouble shoot layer + mod
