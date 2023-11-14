@@ -53,13 +53,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______
     ),
     [_NUMPAD] = LAYOUT_planck_grid(
-        _______,_______,KC_W,   _______,_______,_______,_______,_______,KC_7,   KC_8,   KC_9,   KC_SLSH,
-        _______,KC_A,   KC_S,   KC_D,   _,_______,_______,_______,_______,KC_4,   KC_5  KC_6,   KC_ASTR,
+        _______,_______,KC_UP,  _______,_______,_______,_______,_______,KC_7,   KC_8,   KC_9,   KC_SLSH,
+        _______,KC_LEFT,KC_DOWN,KC_RGHT,_______,_______,_______,_______,KC_4,   KC_5    KC_6,   KC_ASTR,
         _______,_______,_______,_______,_______,_______,_______,_______,KC_1,   KC_2,   KC_3,   KC_MINS,
         _______,_______,_______,_______,_______,_______,_______,_______,KC_DOT, KC_0,   KC_ENT, KC_PLUS 
     ),
     [_ADJUST] = LAYOUT_planck_grid(
-        XXXXXXX,QK_BOOT,DB_TOGG,XXXXXXX,RGB_TOG,RGB_HUI,RGB_HUD,RGB_SAI,RGB_SAD,RGB_VAI,RGB_VAD,XXXXXXX,
+        XXXXXXX,QK_BOOT,DB_TOGG,RGB_TOG,XXXXXXX,RGB_HUI,RGB_HUD,RGB_SAI,RGB_SAD,RGB_VAI,RGB_VAD,XXXXXXX,
         EE_CLR, XXXXXXX,MU_NEXT,AU_ON,  AU_OFF, XXXXXXX,XXXXXXX,GUITAR, XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
         XXXXXXX,AU_NEXT,AU_PREV,MU_ON,  MU_OFF, MI_ON,  MI_OFF, CELLO,  XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
         _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______
