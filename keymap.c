@@ -59,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,_______,_______,_______,_______,_______,_______,_______,KC_DOT, KC_0,   KC_ENT, KC_PLUS 
     ),
     [_ADJUST] = LAYOUT_planck_grid(
-        XXXXXXX,QK_BOOT,DB_TOGG,RGB_TOG,XXXXXXX,RGB_HUI,RGB_HUD,RGB_SAI,RGB_SAD,RGB_VAI,RGB_VAD,XXXXXXX,
+        XXXXXXX,QK_BOOT,DB_TOGG,XXXXXXX,RGB_TOG,RGB_HUI,RGB_HUD,RGB_SAI,RGB_SAD,RGB_VAI,RGB_VAD,XXXXXXX,
         EE_CLR, XXXXXXX,MU_NEXT,AU_ON,  AU_OFF, XXXXXXX,XXXXXXX,GUITAR, XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
         XXXXXXX,AU_NEXT,AU_PREV,MU_ON,  MU_OFF, MI_ON,  MI_OFF, CELLO,  XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
         _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______
