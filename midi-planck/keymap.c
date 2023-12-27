@@ -8,17 +8,11 @@ enum planck_layers {
     _NUMPAD,
     _ADJUST,
     _CELLO,
+    _GUITAR
 };
 
 enum planck_keycodes {
     QWERTY = SAFE_RANGE
-};
-
-enum unicode_names {
-    AE, AG, HG, CU, FE, SN, PB,
-    ARI, TAU, GEM, CAN, LEO, VIR, LIB, SCO, SAG, CAP, AQU, PIS,
-    CJT, STL, SQR, TRN, OPP,
-    NND, SND
 };
 
 #define LOWER   MO(_LOWER)
@@ -26,41 +20,12 @@ enum unicode_names {
 #define VIM     MO(_VIM)
 #define PAD     MO(_NUMPAD)
 #define ADJUST  MO(_ADJUST)
-#define ASTRO   TG(_ASTRO)
 #define CELLO   TG(_CELLO)
+#define GUITAR  TG(_GUITAR)
 
 #define ALT_SFT RALT(KC_RSFT)
 #define GUI_SFT RGUI(KC_RSFT)
 #define CTL_SFT RCTL(KC_RSFT)
-
-const uint32_t PROGMEM unicode_map[] = {
-	[AE] = 0x2609,
-	[AG] = 0x263D,
-	[HG] = 0x263F,
-	[CU] = 0x2640,
-	[FE] = 0x2642,
-	[SN] = 0x2643,
-	[PB] = 0x2644,
-	[ARI] = 0x2648,
-	[TAU] = 0x2649,
-	[GEM] = 0x264A,
-	[CAN] = 0x264B,
-	[LEO] = 0x264C,
-	[VIR] = 0x264D,
-	[LIB] = 0x264E,
-	[SCO] = 0x264F,
-	[SAG] = 0x2650,
-	[CAP] = 0x2651,
-	[AQU] = 0x2652,
-	[PIS] = 0x2653,
-	[CJT] = 0x260C,
-	[STL] = 0x26B9,
-	[SQR] = 0x25A1,
-	[TRN] = 0x25B3,
-	[OPP] = 0x260D,
-	[NND] = 0x260A,
-	[SND] = 0x260B	
-};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT_planck_grid(
@@ -95,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_ADJUST] = LAYOUT_planck_grid(
         XXXXXXX,QK_BOOT,DB_TOGG,XXXXXXX,RGB_TOG,RGB_HUI,RGB_HUD,RGB_SAI,RGB_SAD,RGB_VAI,RGB_VAD,XXXXXXX,
-        EE_CLR, ASTRO,  MU_NEXT,AU_ON,  AU_OFF, XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
+        EE_CLR, XXXXXXX,MU_NEXT,AU_ON,  AU_OFF, XXXXXXX,XXXXXXX,GUITAR, XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
         XXXXXXX,AU_NEXT,AU_PREV,MU_ON,  MU_OFF, MI_ON,  MI_OFF, CELLO,  XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
         _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______
     ),
@@ -105,10 +70,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MI_C,   MI_Cs,  MI_D,   MI_Ds,  MI_E,   MI_F,   MI_Fs,  MI_G,   MI_Gs,  MI_A,   MI_As,  MI_B,
         CELLO,  _______,_______,_______,MI_OCTD,MI_OC1, MI_OC3, MI_OCTU,MI_TRN2,MI_TRN1,MI_TR1, MI_TR2    
     ),
-    [_ASTRO] = LAYOUT_planck_grid(
-        _______,_______,UP(CAP,AQU),UP(SAG,PIS),UM(LEO),_______,_______,    UM(CAN),    UP(TAU,LIB),UP(ARI,SCO),_______,    _______,
-        _______,ASTRO,  UM(PB),     UM(SN),     UM(AE), UM(HG), UM(GEM,VIR),UM(AG),     UM(CU),     UM(FE),     _______,    _______,
-        _______,_______,_______,    _______,    _______,_______,_______,    UP(SND,NND),UM(CJT),    UP(SQR,OPP),UP(STL,TRN),_______,
-        _______,_______,_______,    _______,    _______,_______,_______,    _______,    _______,    _______,    _______,    _______
+    [_GUITAR] = LAYOUT_planck_grid(
+        MI_E2,  MI_F2,  MI_Fs2, MI_G2,  MI_Gs2, MI_A2,  MI_As2, MI_B2,  MI_C3,  MI_Cs3, MI_D3,  MI_Ds3,
+        MI_E1,  MI_F1,  MI_Fs1, MI_G1,  MI_Gs1, MI_A1,  MI_As1, MI_B1,  MI_C2,  MI_Cs2, MI_D2,  MI_Ds2,
+        MI_E,   MI_F,   MI_Fs,  MI_G,   MI_Gs,  MI_A,   MI_As,  MI_B,   MI_C1,  MI_Cs1, MI_D1,  MI_Ds1,
+        GUITAR, _______,_______,_______,MI_OCTD,MI_OC1, MI_OC3, MI_OCTU,MI_TRN2,MI_TRN1,MI_TR1, MI_TR2
     )
 };
