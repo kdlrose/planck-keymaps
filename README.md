@@ -1,7 +1,11 @@
 # planck rev7 layouts
 
-more detailed documentation in each.
+`sailorfe.c` is my daily driver, modularly made up of `base.c` and
+[kdlrose/astrokeys](https://github.com/kdlrose/astrokeys).
 
-- `midi-planck`: my first layout, has two MIDI layers for absolute overkill.
-- `astrolokeys`: same as first one, but replaced second MIDI layer with a
-    unicode map
+- `base.c` is basically the default keymap plus two unicode layers for just em
+    and en dashes.
+- Submdoule `astrokeys` is even more UTF.
+- `midi-cello.c` uses `MIDI_ADVANCED` in `config.h`. I realized I just need to
+    get a cheap synth because I'm too cursed by piano, so this is included for
+    posterity or someone else's reference.

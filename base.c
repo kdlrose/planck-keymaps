@@ -1,18 +1,56 @@
 #include QMK_KEYBOARD_H
 
-enum planck_layers { _QWERTY, _LOWER, _RAISE, _VIM, _NUMPAD, _ADJUST, _CELLO };
+enum planck_layers { _QWERTY, _LOWER, _RAISE, _UTF_1, _UTF_2, _VIM, _NUMPAD, _ADJUST };
 
 enum planck_keycodes { QWERTY = SAFE_RANGE };
 
 #define LOWER   MO(_LOWER)
 #define RAISE   MO(_RAISE)
+#define OPT_UTF MO(_UTF_1) 
+#define UTF_SFT MO(_UTF_2)
 #define VIM     MO(_VIM)
 #define PAD     MO(_NUMPAD)
 #define ADJUST  MO(_ADJUST)
-#define CELLO   TG(_CELLO)
 #define ALT_SFT RALT(KC_RSFT)
 #define GUI_SFT RGUI(KC_RSFT)
 #define CTL_SFT RCTL(KC_RSFT)
+
+enum unicode_names { AE, AG, HG, CU, FE, SN, PB, UNS, NPN, PLT, ARIES, TAURUS, GEMINI, CANCER, LEO, VIRGO, LIBRA, SCORPIO, SAGITTARIUS, CAPRICORN, AQUARIUS, PISCES, CJT, STL, SQR, TRN, OPP, NND, SND, END, EMD, DGR };
+
+const uint32_t PROGMEM unicode_map[] = {
+    [AE] = 0x2609,  // ☉
+    [AG] = 0x263D,  // ☽
+    [HG] = 0x263F,  // ☿
+    [CU] = 0x2640,  // ♀
+    [FE] = 0x2642,  // ♂
+    [SN] = 0x2643,  // ♃
+    [PB] = 0x2644,  // ♄
+    [UNS] = 0x2645, // ♅
+    [NPN] = 0x2646, // ♆
+    [PLT] = 0x2647, // ♇
+    [ARIES] = 0x2648,       // ♈︎
+    [TAURUS] = 0x2649,      // ♉︎
+    [GEMINI] = 0x264A,      // ♊︎
+    [CANCER] = 0x264B,      // ♋︎
+    [LEO] = 0x264C,         // ♌︎
+    [VIRGO] = 0x264D,       // ♍︎
+    [LIBRA] = 0x264E,       // ♎︎
+    [SCORPIO] = 0x264F,     // ♏︎
+    [SAGITTARIUS] = 0x2650, // ♐︎
+    [CAPRICORN] = 0x2651,   // ♑︎
+    [AQUARIUS] = 0x2652,    // ♒︎
+    [PISCES] = 0x2653,      // ♓︎
+    [CJT] = 0x260C, // ☌
+    [STL] = 0x26B9, // ⚹
+    [SQR] = 0x25A1, // □
+    [TRN] = 0x25B3, // △
+    [OPP] = 0x260D, // ☍
+    [NND] = 0x260A, // ☊
+    [SND] = 0x260B, // ☋
+    [END] = 0x2013,     // –
+    [EMD] = 0x2014,     // —
+    [DGR]  = 0x00B0     // °
+};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT_planck_grid(
@@ -33,6 +71,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,KC_F7,  KC_F8,  KC_F9,  KC_F10, KC_F11, KC_F12, _______,_______,_______,_______,_______,
         _______,_______,_______,OPT_UTF,ADJUST, _______,_______,_______,_______,_______,_______,_______
     ),
+    [_UTF_1] = LAYOUT_planck_grid(
+        _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,       
+        _______,_______,_______,_______,_______,_______,_______,UM(END),_______,_______,_______,_______,      
+        UTF_SFT,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,      
+        _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______       
+    ),
+    [_UTF_2] = LAYOUT_planck_grid(
+        _______,_______,_______,_______,_______,_______,_______,_______,UM(DGR),_______,_______,_______,       
+        _______,_______,_______,_______,_______,_______,_______,UM(EMD),_______,_______,_______,_______,      
+        _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,      
+        _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______       
+    ),
    [_VIM] = LAYOUT_planck_grid(
         _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,
         KC_ESC, _______,_______,_______,KC_PGDN,KC_HOME,KC_LEFT,KC_DOWN,KC_UP,  KC_RGHT,_______,_______,
@@ -45,16 +95,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,_______,_______,_______,_______,_______,_______,_______,KC_1,   KC_2,   KC_3,   KC_MINS,
         _______,_______,_______,_______,_______,_______,_______,_______,KC_DOT, KC_0,   KC_ENT, KC_PLUS 
     ),
-    [_CELLO] = LAYOUT_planck_grid(
-        MI_Fs1, MI_F1,  MI_E1,  MI_Ds1, MI_D1,  MI_Cs1, MI_C1,  XXXXXXX,XXXXXXX,XXXXXXX,MI_AOFF,KC_BSPC,
-        MI_Cs2, MI_C2,  MI_B1,  MI_As1, MI_A1,  MI_Gs1, MI_G1,  MI_OCTD,MI_TRN2,MI_TR2, MI_OCTU,XXXXXXX,
-        MI_Gs2, MI_G2,  MI_Fs2, MI_F2,  MI_E2,  MI_Ds2, MI_D2,  MI_OC1, MI_TRN1,MI_TR1, MI_OC3, KC_ENT,
-        MI_Ds3, MI_D3,  MI_Cs3, MI_C3,  MI_B2,  MI_As2, MI_A2,  VIM,    XXXXXXX,XXXXXXX,XXXXXXX,CELLO
-    ),
     [_ADJUST] = LAYOUT_planck_grid(
         XXXXXXX,QK_BOOT,DB_TOGG,XXXXXXX,RGB_TOG,RGB_HUI,RGB_HUD,RGB_SAI,RGB_SAD,RGB_VAI,RGB_VAD,XXXXXXX,
-        EE_CLR, XXXXXXX,MU_NEXT,AU_ON,  AU_OFF, XXXXXXX,XXXXXXX,CELLO,  XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
-        XXXXXXX,AU_NEXT,AU_PREV,MU_ON,  MU_OFF, MI_ON,  MI_OFF, XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
+        EE_CLR, XXXXXXX,MU_NEXT,AU_ON,  AU_OFF, XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
+        XXXXXXX,AU_NEXT,AU_PREV,MU_ON,  MU_OFF, XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
         _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______
     )
 };
