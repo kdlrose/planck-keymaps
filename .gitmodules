@@ -1,0 +1,3 @@
+[submodule "astrokeys"]
+	path = astrokeys
+	url = git@github.com:kdlrose/astrokeys.git
