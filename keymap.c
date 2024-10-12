@@ -1,14 +1,13 @@
 #include QMK_KEYBOARD_H
 #include "keymap_russian.h"
 
-enum planck_layers { _QWERTY, _LOWER, _RAISE, _RUSKI, _SPUSK, _UTF, _SIDER, _VIM, _NUMPAD, _ADJUST };
+enum planck_layers { _QWERTY, _LOWER, _RAISE, _RUSKI, _UTF, _SIDER, _VIM, _NUMPAD, _ADJUST };
 
 enum planck_keycodes { QWERTY = SAFE_RANGE };
 
 #define LOWER   MO(_LOWER)
 #define RAISE   MO(_RAISE)
 #define RUSKI   TG(_RUSKI)  
-#define SPUSK   MO(_SPUSK)
 #define OPT_UTF MO(_UTF) 
 #define SID     MO(_SIDER)
 #define VIM     MO(_VIM)
@@ -28,7 +27,6 @@ enum planck_keycodes { QWERTY = SAFE_RANGE };
 #define HARD    UP(SQUARE,OPPOSITE)
 #define EASY    UP(SEXTILE,TRINE)
 #define NODES   UP(S_NODE,N_NODE)
-#define PY_YO   UP(YO_LOW,YO_CAP)
 
 enum unicode_names { 
     AE, AG, HG, CU, FE, SN, PB, UNS, NPN, PLT,
@@ -94,16 +92,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,_______,_______,OPT_UTF,ADJUST, _______,_______,_______,_______,_______,_______,_______
     ),
     [_RUSKI] = LAYOUT_planck_grid(
-        RU_SHTI,RU_TSE, RU_U,   RU_KA,  RU_IE,  RU_EN,  RU_GHE, RU_SHA, RU_SHCH,RU_ZE,  RU_HA,  _______,
+        RU_SHTI,RU_TSE, RU_U,   RU_KA,  TD(YEYO),RU_EN, RU_GHE, RU_SHA, RU_SHCH,RU_ZE,  RU_HA,  _______,
         _______,RU_EF,  RU_YERU,RU_VE,  RU_A,   RU_PE,  RU_ER,  RU_O,   RU_EL,  RU_DE,  RU_ZHE, RU_E,
         _______,RU_YA,  RU_CHE, RU_ES,  RU_EM,  RU_I,   RU_TE,  RU_SOFT,RU_BE,  RU_YU,  RU_DOT, _______,
-        _______,_______,_______,_______,SPUSK,  _______,_______,RAISE,  _______,_______,_______,RUSKI
-    ),
-    [_SPUSK] = LAYOUT_planck_grid(
-        PY_YO,  RU_EXLM,RU_DQUO,RU_NUM, KC_SCLN,KC_PERC,KC_COLN,KC_QUES,KC_ASTR,KC_LPRN,KC_RPRN,KC_DEL,
-        KC_CAPS,KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_F6,  KC_UNDS,KC_PLUS,KC_LCBR,KC_RCBR,KC_PIPE,
-        _______,KC_F7,  KC_F8,  KC_F9,  KC_F10, KC_F11, KC_F12, _______,_______,_______,_______,_______,
-        _______,_______,_______,_______,_______,_______,_______,ADJUST, SID,    KC_VOLD,KC_VOLU,_______
+        _______,_______,_______,_______,LOWER,  _______,_______,RAISE,  _______,_______,_______,RUSKI
     ),
     [_UTF] = LAYOUT_planck_grid(
         _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,       
@@ -136,3 +128,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______
     )
 };
+
+// Tap Dance declarations
+enum {
+    YEYO
+};
+
+// Tap Dance definitions
+tap_dance_action_t tap_dance_actions [] = {
+    // Tap once for Е, tap twice for Ё
+    [YEYO] = ACTION_TAP_DANCE_DOUBLE(RU_IE, RU_YO)
+}
