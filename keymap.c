@@ -26,46 +26,46 @@ enum planck_keycodes { QWERTY = SAFE_RANGE };
 #define HARD    UP(SQUARE,OPPOSITE)
 #define EASY    UP(SEXTILE,TRINE)
 #define NODES   UP(S_NODE,N_NODE)
-#define RU_A    UP(LOW_A,CAP_A)
-#define RU_BE   UP(LOW_BE,CAP_BE)
-#define RU_VE   UP(LOW_VE,CAP_VE)
-#define RU_GHE  UP(LOW_GHE,CAP_GHE)
-#define RU_DE   UP(LOW_DE,CAP_DE)
-#define RU_IE   UP(LOW_IE,CAP_IE)
-#define RU_ZHE  UP(LOW_ZHE,CAP_ZHE)
-#define RU_ZE   UP(LOW_ZE,CAP_ZE)
-#define RU_I    UP(LOW_I,CAP_I)
-#define RU_SHTI UP(LOW_SHORT_I,CAP_SHORT_I)
-#define RU_KA   UP(LOW_KA,CAP_KA)
-#define RU_EL   UP(LOW_EL,CAP_EL)
-#define RU_EM   UP(LOW_EM,CAP_EM)
-#define RU_EN   UP(LOW_EN,CAP_EN)
-#define RU_O    UP(LOW_O,CAP_O)
-#define RU_PE   UP(LOW_PE,CAP_PE)
-#define RU_ER   UP(LOW_ER,CAP_ER)
-#define RU_ES   UP(LOW_ES,CAP_ES)
-#define RU_TE   UP(LOW_TE,CAP_TE)
-#define RU_U    UP(LOW_U,CAP_U)
-#define RU_EF   UP(LOW_EF,CAP_EF)
-#define RU_HA   UP(LOW_HA,CAP_HA)
-#define RU_TSE  UP(LOW_TSE,CAP_TSE)
-#define RU_CHE  UP(LOW_CHE,CAP_CHE)
-#define RU_SHA  UP(LOW_SHA,CAP_SHA)
-#define RU_SHCH UP(LOW_SHCHA,CAP_SHCHA)
-#define RU_HARD UP(LOW_HARD,CAP_HARD)
-#define RU_YERU UP(LOW_YERU,CAP_YERU)
-#define RU_SOFT UP(LOW_SOFT,CAP_SOFT)
-#define RU_E    UP(LOW_E,CAP_E)
-#define RU_YU   UP(LOW_YU,CAP_YU)
-#define RU_YA   UP(LOW_YA,CAP_YA)
-#define RU_YO   UP(LOW_IO,CAP_IO)
+#define RU_A    UP(A_LOWER,A_UPPER)
+#define RU_BE   UP(BE_LOWER,BE_UPPER)
+#define RU_VE   UP(VE_LOWER,VE_UPPER)
+#define RU_GHE  UP(GHE_LOWER,GHE_UPPER)
+#define RU_DE   UP(DE_LOWER,DE_UPPER)
+#define RU_IE   UP(IE_LOWER,IE_UPPER)
+#define RU_ZHE  UP(ZHE_LOWER,ZHE_UPPER)
+#define RU_ZE   UP(ZE_LOWER,ZE_UPPER)
+#define RU_I    UP(I_LOWER,I_UPPER)
+#define RU_SHTI UP(SHORT_I_LOWER,SHORT_I_UPPER)
+#define RU_KA   UP(KA_LOWER,KA_UPPER)
+#define RU_EL   UP(EL_LOWER,EL_UPPER)
+#define RU_EM   UP(EM_LOWER,EM_UPPER)
+#define RU_EN   UP(EN_LOWER,EN_UPPER)
+#define RU_O    UP(O_LOWER,O_UPPER)
+#define RU_PE   UP(PE_LOWER,PE_UPPER)
+#define RU_ER   UP(ER_LOWER,ER_UPPER)
+#define RU_ES   UP(ES_LOWER,ES_UPPER)
+#define RU_TE   UP(TE_LOWER,TE_UPPER)
+#define RU_U    UP(U_LOWER,U_UPPER)
+#define RU_EF   UP(EF_LOWER,EF_UPPER)
+#define RU_HA   UP(HA_LOWER,HA_UPPER)
+#define RU_TSE  UP(TSE_LOWER,TSE_UPPER)
+#define RU_CHE  UP(CHE_LOWER,CHE_UPPER)
+#define RU_SHA  UP(SHA_LOWER,SHA_UPPER)
+#define RU_SHCH UP(SHCHA_LOWER,SHCHA_UPPER)
+#define RU_HARD UP(HARD_LOWER,HARD_UPPER)
+#define RU_YERU UP(YERU_LOWER,YERU_UPPER)
+#define RU_SOFT UP(SOFT_LOWER,SOFT_UPPER)
+#define RU_E    UP(E_LOWER,E_UPPER)
+#define RU_YU   UP(YU_LOWER,YU_UPPER)
+#define RU_YA   UP(YA_LOWER,YA_UPPER)
+#define RU_YO   UP(IO_LOWER,IO_UPPER)
 
 enum unicode_names { 
     AE, AG, HG, CU, FE, SN, PB, UNS, NPN, PLT,
     ARIES, TAURUS, GEMINI, CANCER, LEO, VIRGO, LIBRA, SCORPIO, SAGITTARIUS, CAPRICORN, AQUARIUS, PISCES,
     CJT, SEXTILE, SQUARE, TRINE, OPPOSITE, N_NODE, S_NODE,
     EN_DASH, EM_DASH,
-    CAP_A, LOW_A, CAP_BE, LOW_BE, CAP_VE, LOW_VE, CAP_GHE, LOW_GHE, CAP_DE, LOW_DE, CAP_IE, LOW_IE, CAP_ZHE, LOW_ZHE, CAP_ZE, LOW_ZE, CAP_I, LOW_I, CAP_SHORT_I, LOW_SHORT_I, CAP_KA, LOW_KA, CAP_EL, LOW_EL, CAP_EM, LOW_EM, CAP_EN, LOW_EN, CAP_O, LOW_O, CAP_PE, LOW_PE, CAP_ER, LOW_ER, CAP_ES, LOW_ES, CAP_TE, LOW_TE, CAP_U, LOW_U, CAP_EF, LOW_EF, CAP_HA, LOW_HA, CAP_TSE, LOW_TSE, CAP_CHE, LOW_CHE, CAP_SHA, LOW_SHA, CAP_SHCHA, LOW_SHCHA, CAP_HARD, LOW_HARD, CAP_YERU, LOW_YERU, CAP_SOFT, LOW_SOFT, CAP_E, LOW_E, CAP_YU, LOW_YU, CAP_YA, LOW_YA, CAP_IO, LOW_IO
+    A_UPPER, A_LOWER, BE_UPPER, BE_LOWER, VE_UPPER, VE_LOWER, GHE_UPPER, GHE_LOWER, DE_UPPER, DE_LOWER, IE_UPPER, IE_LOWER, ZHE_UPPER, ZHE_LOWER, ZE_UPPER, ZE_LOWER, I_UPPER, I_LOWER, SHORT_I_UPPER, SHORT_I_LOWER, KA_UPPER, KA_LOWER, EL_UPPER, EL_LOWER, EM_UPPER, EM_LOWER, EN_UPPER, EN_LOWER, O_UPPER, O_LOWER, PE_UPPER, PE_LOWER, ER_UPPER, ER_LOWER, ES_UPPER, ES_LOWER, TE_UPPER, TE_LOWER, U_UPPER, U_LOWER, EF_UPPER, EF_LOWER, HA_UPPER, HA_LOWER, TSE_UPPER, TSE_LOWER, CHE_UPPER, CHE_LOWER, SHA_UPPER, SHA_LOWER, SHCHA_UPPER, SHCHA_LOWER, HARD_UPPER, HARD_LOWER, YERU_UPPER, YERU_LOWER, SOFT_UPPER, SOFT_LOWER, E_UPPER, E_LOWER, YU_UPPER, YU_LOWER, YA_UPPER, YA_LOWER, IO_UPPER, IO_LOWER
 };
 
 const uint32_t PROGMEM unicode_map[] = {
@@ -100,72 +100,72 @@ const uint32_t PROGMEM unicode_map[] = {
     [S_NODE]        = 0x260B,   // ☋
     [EN_DASH]       = 0x2013,   // –
     [EM_DASH]       = 0x2014,   // —
-    [CAP_A]         = 0x0410,   // А
-    [CAP_BE]        = 0x0411,   // Б
-    [CAP_VE]        = 0x0412,   // В
-    [CAP_GHE]       = 0x0413,   // Г
-    [CAP_DE]        = 0x0414,   // Д
-    [CAP_IE]        = 0x0415,   // Е
-    [CAP_ZHE]       = 0x0416,   // Ж
-    [CAP_ZE]        = 0x0417,   // З
-    [CAP_I]         = 0x0418,   // И
-    [CAP_SHORT_I]   = 0x0419,   // Й
-    [CAP_KA]        = 0x041A,   // К
-    [CAP_EL]        = 0x041B,   // Л
-    [CAP_EM]        = 0x041C,   // М
-    [CAP_EN]        = 0x041D,   // Н
-    [CAP_O]         = 0x041E,   // О
-    [CAP_PE]        = 0x041F,   // П
-    [CAP_ER]        = 0x0420,   // Р
-    [CAP_ES]        = 0x0421,   // С
-    [CAP_TE]        = 0x0422,   // Т
-    [CAP_U]         = 0x0423,   // У
-    [CAP_EF]        = 0x0424,   // Ф
-    [CAP_HA]        = 0x0425,   // Х
-    [CAP_TSE]       = 0x0426,   // Ц
-    [CAP_CHE]       = 0x0427,   // Ч
-    [CAP_SHA]       = 0x0428,   // Ш
-    [CAP_SHCHA]     = 0x0429,   // Щ
-    [CAP_HARD]      = 0x042A,   // Ъ
-    [CAP_YERU]      = 0x042B,   // Ы
-    [CAP_SOFT]      = 0x042C,   // Ь
-    [CAP_E]         = 0x042D,   // Э
-    [CAP_YU]        = 0x042E,   // Ю
-    [CAP_YA]        = 0x042F,   // Я
-    [CAP_IO]        = 0x0401,   // Ё
-    [LOW_A]         = 0x0430,   // а
-    [LOW_BE]        = 0x0431,   // б
-    [LOW_VE]        = 0x0432,   // в
-    [LOW_GHE]       = 0x0433,   // г
-    [LOW_DE]        = 0x0434,   // д
-    [LOW_IE]        = 0x0435,   // е
-    [LOW_ZHE]       = 0x0436,   // ж
-    [LOW_ZE]        = 0x0437,   // з
-    [LOW_I]         = 0x0438,   // и
-    [LOW_SHORT_I]   = 0x0439,   // й
-    [LOW_KA]        = 0x043A,   // к
-    [LOW_EL]        = 0x043B,   // л
-    [LOW_EM]        = 0x043C,   // м
-    [LOW_EN]        = 0x043D,   // н
-    [LOW_O]         = 0x043E,   // о
-    [LOW_PE]        = 0x043F,   // п
-    [LOW_ER]        = 0x0440,   // р
-    [LOW_ES]        = 0x0441,   // с
-    [LOW_TE]        = 0x0442,   // т
-    [LOW_U]         = 0x0443,   // у
-    [LOW_EF]        = 0x0444,   // ф
-    [LOW_HA]        = 0x0445,   // х
-    [LOW_TSE]       = 0x0446,   // ц
-    [LOW_CHE]       = 0x0447,   // ч
-    [LOW_SHA]       = 0x0448,   // ш
-    [LOW_SHCHA]     = 0x0449,   // щ
-    [LOW_HARD]      = 0x044A,   // ъ
-    [LOW_YERU]      = 0x044B,   // ы
-    [LOW_SOFT]      = 0x044C,   // ь
-    [LOW_E]         = 0x044D,   // э
-    [LOW_YU]        = 0x044E,   // ю
-    [LOW_YA]        = 0x044F,   // я
-    [LOW_IO]        = 0x0451    // ё
+    [A_UPPER]       = 0x0410,   // А
+    [BE_UPPER]      = 0x0411,   // Б
+    [VE_UPPER]      = 0x0412,   // В
+    [GHE_UPPER]     = 0x0413,   // Г
+    [DE_UPPER]      = 0x0414,   // Д
+    [IE_UPPER]      = 0x0415,   // Е
+    [ZHE_UPPER]     = 0x0416,   // Ж
+    [ZE_UPPER]      = 0x0417,   // З
+    [I_UPPER]       = 0x0418,   // И
+    [SHORT_I_UPPER] = 0x0419,   // Й
+    [KA_UPPER]      = 0x041A,   // К
+    [EL_UPPER]      = 0x041B,   // Л
+    [EM_UPPER]      = 0x041C,   // М
+    [EN_UPPER]      = 0x041D,   // Н
+    [O_UPPER]       = 0x041E,   // О
+    [PE_UPPER]      = 0x041F,   // П
+    [ER_UPPER]      = 0x0420,   // Р
+    [ES_UPPER]      = 0x0421,   // С
+    [TE_UPPER]      = 0x0422,   // Т
+    [U_UPPER]       = 0x0423,   // У
+    [EF_UPPER]      = 0x0424,   // Ф
+    [HA_UPPER]      = 0x0425,   // Х
+    [TSE_UPPER]     = 0x0426,   // Ц
+    [CHE_UPPER]     = 0x0427,   // Ч
+    [SHA_UPPER]     = 0x0428,   // Ш
+    [SHCHA_UPPER]   = 0x0429,   // Щ
+    [HARD_UPPER]    = 0x042A,   // Ъ
+    [YERU_UPPER]    = 0x042B,   // Ы
+    [SOFT_UPPER]    = 0x042C,   // Ь
+    [E_UPPER]       = 0x042D,   // Э
+    [YU_UPPER]      = 0x042E,   // Ю
+    [YA_UPPER]      = 0x042F,   // Я
+    [IO_UPPER]      = 0x0401,   // Ё
+    [A_LOWER]       = 0x0430,   // а
+    [BE_LOWER]      = 0x0431,   // б
+    [VE_LOWER]      = 0x0432,   // в
+    [GHE_LOWER]     = 0x0433,   // г
+    [DE_LOWER]      = 0x0434,   // д
+    [IE_LOWER]      = 0x0435,   // е
+    [ZHE_LOWER]     = 0x0436,   // ж
+    [ZE_LOWER]      = 0x0437,   // з
+    [I_LOWER]       = 0x0438,   // и
+    [SHORT_I_LOWER] = 0x0439,   // й
+    [KA_LOWER]      = 0x043A,   // к
+    [EL_LOWER]      = 0x043B,   // л
+    [EM_LOWER]      = 0x043C,   // м
+    [EN_LOWER]      = 0x043D,   // н
+    [O_LOWER]       = 0x043E,   // о
+    [PE_LOWER]      = 0x043F,   // п
+    [ER_LOWER]      = 0x0440,   // р
+    [ES_LOWER]      = 0x0441,   // с
+    [TE_LOWER]      = 0x0442,   // т
+    [U_LOWER]       = 0x0443,   // у
+    [EF_LOWER]      = 0x0444,   // ф
+    [HA_LOWER]      = 0x0445,   // х
+    [TSE_LOWER]     = 0x0446,   // ц
+    [CHE_LOWER]     = 0x0447,   // ч
+    [SHA_LOWER]     = 0x0448,   // ш
+    [SHCHA_LOWER]   = 0x0449,   // щ
+    [HARD_LOWER]    = 0x044A,   // ъ
+    [YERU_LOWER]    = 0x044B,   // ы
+    [SOFT_LOWER]    = 0x044C,   // ь
+    [E_LOWER]       = 0x044D,   // э
+    [YU_LOWER]      = 0x044E,   // ю
+    [YA_LOWER]      = 0x044F,   // я
+    [IO_LOWER]      = 0x0451    // ё
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -173,22 +173,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB, KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,   KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,   KC_BSPC,
         KC_ESC, KC_A,   KC_S,   KC_D,   KC_F,   KC_G,   KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,KC_QUOT,
         KC_LSFT,KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,KC_ENT,
-        PAD,    KC_LCTL,KC_LGUI,KC_LALT,LOWER,  VIM,    KC_SPC, RAISE,  ALT_GUI,GUI_SFT,CTL_ALT,KC_CAPS
+        PAD,    KC_LCTL,KC_LGUI,KC_LALT,LOWER,  VIM,    KC_SPC, RAISE,  ALT_GUI,GUI_SFT,CTL_ALT,KC_PSCR
     ),
     [_LOWER] = LAYOUT_planck_grid(
         KC_TILD,KC_EXLM,KC_AT,  KC_HASH,KC_DLR, KC_PERC,KC_CIRC,KC_AMPR,KC_ASTR,KC_LPRN,KC_RPRN,KC_DEL,
         RUSKI,  KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_F6,  KC_UNDS,KC_PLUS,KC_LCBR,KC_RCBR,KC_PIPE,
         _______,KC_F7,  KC_F8,  KC_F9,  KC_F10, KC_F11, KC_F12, _______,_______,_______,_______,_______,
-        _______,_______,_______,_______,_______,_______,_______,ADJUST, SID,    KC_VOLD,KC_VOLU,_______
+        _______,_______,_______,_______,_______,_______,_______,ADJUST, SID,    KC_VOLD,KC_VOLU,KC_MUTE
     ),
     [_RAISE] = LAYOUT_planck_grid(
-        KC_GRV, KC_1,   KC_2,   KC_3,   KC_4,   KC_5,   KC_6,   KC_7,   KC_8,   KC_9,   KC_0,   _______,
-        KC_DEL, KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_F6,  KC_MINS,KC_EQL, KC_LBRC,KC_RBRC,KC_BSLS,
+        KC_GRV, KC_1,   KC_2,   KC_3,   KC_4,   KC_5,   KC_6,   KC_7,   KC_8,   KC_9,   KC_0,   KC_DEL,
+        KC_CAPS,KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_F6,  KC_MINS,KC_EQL, KC_LBRC,KC_RBRC,KC_BSLS,
         _______,KC_F7,  KC_F8,  KC_F9,  KC_F10, KC_F11, KC_F12, _______,_______,_______,_______,_______,
-        _______,_______,_______,OPT_UTF,ADJUST, _______,_______,_______,_______,_______,_______,_______
+        KC_MPRV,KC_MPLY,KC_MNXT,OPT_UTF,ADJUST, _______,_______,_______,_______,_______,_______,_______
     ),
     [_RUSKI] = LAYOUT_planck_grid(
-        RU_SHTI,RU_TSE, RU_U,   RU_KA,  RU_IE,  RU_EN, RU_GHE, RU_SHA,  RU_SHCH,RU_ZE,  RU_HA,  _______,
+        RU_SHTI,RU_TSE, RU_U,   RU_KA,  RU_IE,  RU_EN,  RU_GHE, RU_SHA, RU_SHCH,RU_ZE,  RU_HA,  _______,
         _______,RU_EF,  RU_YERU,RU_VE,  RU_A,   RU_PE,  RU_ER,  RU_O,   RU_EL,  RU_DE,  RU_ZHE, RU_E,
         _______,RU_YA,  RU_CHE, RU_ES,  RU_EM,  RU_I,   RU_TE,  RU_SOFT,RU_BE,  RU_YU,  KC_DOT, _______,
         _______,_______,_______,_______,LOWER,  _______,_______,RAISE,  _______,_______,_______,_______
@@ -212,10 +212,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______
     ),
     [_NUMPAD] = LAYOUT_planck_grid(
-        _______,_______,KC_UP,  _______,_______,_______,_______,_______,KC_7,   KC_8,   KC_9,   KC_SLSH,
-        _______,KC_LEFT,KC_DOWN,KC_RGHT,_______,_______,_______,_______,KC_4,   KC_5,   KC_6,   KC_ASTR,
-        _______,_______,_______,_______,_______,_______,_______,_______,KC_1,   KC_2,   KC_3,   KC_MINS,
-        _______,_______,_______,_______,_______,_______,_______,_______,KC_DOT, KC_0,   KC_ENT, KC_PLUS 
+        _______,_______,KC_UP,  _______,_______,_______,_______,_______,KC_P7,  KC_P8,  KC_P9,  KC_PSLS,
+        _______,KC_LEFT,KC_DOWN,KC_RGHT,_______,_______,_______,_______,KC_P4,  KC_P5,  KC_P6,  KC_PAST,
+        _______,_______,_______,_______,_______,_______,_______,_______,KC_P1,  KC_P2,  KC_P3,  KC_PMNS,
+        _______,_______,_______,_______,_______,_______,_______,_______,KC_PDOT,KC_P0,  KC_PENT,KC_PPLS 
     ),
     [_ADJUST] = LAYOUT_planck_grid(
         XXXXXXX,QK_BOOT,DB_TOGG,XXXXXXX,RGB_TOG,RGB_HUI,RGB_HUD,RGB_SAI,RGB_SAD,RGB_VAI,RGB_VAD,XXXXXXX,
