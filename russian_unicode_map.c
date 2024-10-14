@@ -5,72 +5,72 @@ enum unicode_names {
 };
 
 const uint32_t PROGMEM unicode_map[] = {
-    A_CAP       = 0x0410,
-    BE_CAP      = 0x0411,
-    VE_CAP      = 0x0412,
-    GHE_CAP     = 0x0413,
-    DE_CAP      = 0x0414,
-    IE_CAP      = 0x0415,
-    ZHE_CAP     = 0x0416,
-    ZE_CAP      = 0x0417,
-    I_CAP       = 0x0418,
-    SHORT_I_CAP = 0x0419,
-    KA_CAP      = 0x041A,
-    EL_CAP      = 0x041B,
-    EM_CAP      = 0x041C,
-    EN_CAP      = 0x041D,
-    O_CAP       = 0x041E,
-    PE_CAP      = 0x041F,
-    ER_CAP      = 0x0420,
-    ES_CAP      = 0x0421,
-    TE_CAP      = 0x0422,
-    U_CAP       = 0x0423,
-    EF_CAP      = 0x0424,
-    HA_CAP      = 0x0425,
-    TSE_CAP     = 0x0426,
-    CHE_CAP     = 0x0427,
-    SHA_CAP     = 0x0428,
-    SHCHA_CAP   = 0x0429,
-    HARD_CAP    = 0x042A,
-    YERU_CAP    = 0x042B,
-    SOFT_CAP    = 0x042C,
-    E_CAP       = 0x042D,
-    YU_CAP      = 0x042E,
-    YA_CAP      = 0x042F,
-    IO_CAP      = 0x0401,
-    A_LOW       = 0x0430,
-    BE_LOW      = 0x0431,
-    VE_LOW      = 0x0432,
-    GHE_LOW     = 0x0433,
-    DE_LOW      = 0x0434,
-    IE_LOW      = 0x0435,
-    ZHE_LOW     = 0x0436,
-    ZE_LOW      = 0x0437,
-    I_LOW       = 0x0438,
-    SHORT_I_LOW = 0x0439,
-    KA_LOW      = 0x043A,
-    EL_LOW      = 0x043B,
-    EM_LOW      = 0x043C,
-    EN_LOW      = 0x043D,
-    O_LOW       = 0x043E,
-    PE_LOW      = 0x043F,
-    ER_LOW      = 0x0440,
-    ES_LOW      = 0x0441,
-    TE_LOW      = 0x0442,
-    U_LOW       = 0x0443,
-    EF_LOW      = 0x0444,
-    HA_LOW      = 0x0445,
-    TSE_LOW     = 0x0446,
-    CHE_LOW     = 0x0447,
-    SHA_LOW     = 0x0448,
-    SHCHA_LOW   = 0x0449,
-    HARD_LOW    = 0x044A,
-    YERU_LOW    = 0x044B,
-    SOFT_LOW    = 0x044C,
-    E_LOW       = 0x044D,
-    YU_LOW      = 0x044E,
-    YA_LOW      = 0x044F,
-    IO_LOW      = 0x0451
+    [A_CAP]         = 0x0410,   // А
+    [BE_CAP]        = 0x0411,   // Б
+    [VE_CAP]        = 0x0412,   // В
+    [GHE_CAP]       = 0x0413,   // Г
+    [DE_CAP]        = 0x0414,   // Д
+    [IE_CAP]        = 0x0415,   // Е
+    [ZHE_CAP]       = 0x0416,   // Ж
+    [ZE_CAP]        = 0x0417,   // З
+    [I_CAP]         = 0x0418,   // И
+    [SHORT_I_CAP]   = 0x0419,   // Й
+    [KA_CAP]        = 0x041A,   // К
+    [EL_CAP]        = 0x041B,   // Л
+    [EM_CAP]        = 0x041C,   // М
+    [EN_CAP]        = 0x041D,   // Н
+    [O_CAP]         = 0x041E,   // О
+    [PE_CAP]        = 0x041F,   // П
+    [ER_CAP]        = 0x0420,   // Р
+    [ES_CAP]        = 0x0421,   // С
+    [TE_CAP]        = 0x0422,   // Т
+    [U_CAP]         = 0x0423,   // У
+    [EF_CAP]        = 0x0424,   // Ф
+    [HA_CAP]        = 0x0425,   // Х
+    [TSE_CAP]       = 0x0426,   // Ц
+    [CHE_CAP]       = 0x0427,   // Ч
+    [SHA_CAP]       = 0x0428,   // Ш
+    [SHCHA_CAP]     = 0x0429,   // Щ
+    [HARD_CAP]      = 0x042A,   // Ъ
+    [YERU_CAP]      = 0x042B,   // Ы
+    [SOFT_CAP]      = 0x042C,   // Ь
+    [E_CAP]         = 0x042D,   // Э
+    [YU_CAP]        = 0x042E,   // Ю
+    [YA_CAP]        = 0x042F,   // Я
+    [IO_CAP]        = 0x0401,   // Ё
+    [A_LOW]         = 0x0430,   // а
+    [BE_LOW]        = 0x0431,   // б
+    [VE_LOW]        = 0x0432,   // в
+    [GHE_LOW]       = 0x0433,   // г
+    [DE_LOW]        = 0x0434,   // д
+    [IE_LOW]        = 0x0435,   // е
+    [ZHE_LOW]       = 0x0436,   // ж
+    [ZE_LOW]        = 0x0437,   // з
+    [I_LOW]         = 0x0438,   // и
+    [SHORT_I_LOW]   = 0x0439,   // й
+    [KA_LOW]        = 0x043A,   // к
+    [EL_LOW]        = 0x043B,   // л
+    [EM_LOW]        = 0x043C,   // м
+    [EN_LOW]        = 0x043D,   // н
+    [O_LOW]         = 0x043E,   // о
+    [PE_LOW]        = 0x043F,   // п
+    [ER_LOW]        = 0x0440,   // р
+    [ES_LOW]        = 0x0441,   // с
+    [TE_LOW]        = 0x0442,   // т
+    [U_LOW]         = 0x0443,   // у
+    [EF_LOW]        = 0x0444,   // ф
+    [HA_LOW]        = 0x0445,   // х
+    [TSE_LOW]       = 0x0446,   // ц
+    [CHE_LOW]       = 0x0447,   // ч
+    [SHA_LOW]       = 0x0448,   // ш
+    [SHCHA_LOW]     = 0x0449,   // щ
+    [HARD_LOW]      = 0x044A,   // ъ
+    [YERU_LOW]      = 0x044B,   // ы
+    [SOFT_LOW]      = 0x044C,   // ь
+    [E_LOW]         = 0x044D,   // э
+    [YU_LOW]        = 0x044E,   // ю
+    [YA_LOW]        = 0x044F,   // я
+    [IO_LOW]        = 0x0451    // ё
 };
 
 #define RU_A UP(A_LOW,A_CAP)
@@ -98,7 +98,7 @@ const uint32_t PROGMEM unicode_map[] = {
 #define RU_TSE UP(TSE_LOW,TSE_CAP)
 #define RU_CHE UP(CHE_LOW,CHE_CAP)
 #define RU_SHA UP(SHA_LOW,SHA_CAP)
-#define RU_SHCHA UP(SHCHA_LOW,SHCHA_CAP)
+#define RU_SHCH UP(SHCHA_LOW,SHCHA_CAP)
 #define RU_HARD UP(HARD_LOW,HARD_CAP)
 #define RU_YERU UP(YERU_LOW,YERU_CAP)
 #define RU_SOFT UP(SOFT_LOW,SOFT_CAP)

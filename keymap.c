@@ -1,5 +1,4 @@
 #include QMK_KEYBOARD_H
-#include "keymap_russian.h"
 
 enum planck_layers { _QWERTY, _LOWER, _RAISE, _RUSKI, _UTF, _SIDER, _VIM, _NUMPAD, _ADJUST };
 
@@ -27,13 +26,46 @@ enum planck_keycodes { QWERTY = SAFE_RANGE };
 #define HARD    UP(SQUARE,OPPOSITE)
 #define EASY    UP(SEXTILE,TRINE)
 #define NODES   UP(S_NODE,N_NODE)
+#define RU_A    UP(LOW_A,CAP_A)
+#define RU_BE   UP(LOW_BE,CAP_BE)
+#define RU_VE   UP(LOW_VE,CAP_VE)
+#define RU_GHE  UP(LOW_GHE,CAP_GHE)
+#define RU_DE   UP(LOW_DE,CAP_DE)
+#define RU_IE   UP(LOW_IE,CAP_IE)
+#define RU_ZHE  UP(LOW_ZHE,CAP_ZHE)
+#define RU_ZE   UP(LOW_ZE,CAP_ZE)
+#define RU_I    UP(LOW_I,CAP_I)
+#define RU_SHTI UP(LOW_SHORT_I,CAP_SHORT_I)
+#define RU_KA   UP(LOW_KA,CAP_KA)
+#define RU_EL   UP(LOW_EL,CAP_EL)
+#define RU_EM   UP(LOW_EM,CAP_EM)
+#define RU_EN   UP(LOW_EN,CAP_EN)
+#define RU_O    UP(LOW_O,CAP_O)
+#define RU_PE   UP(LOW_PE,CAP_PE)
+#define RU_ER   UP(LOW_ER,CAP_ER)
+#define RU_ES   UP(LOW_ES,CAP_ES)
+#define RU_TE   UP(LOW_TE,CAP_TE)
+#define RU_U    UP(LOW_U,CAP_U)
+#define RU_EF   UP(LOW_EF,CAP_EF)
+#define RU_HA   UP(LOW_HA,CAP_HA)
+#define RU_TSE  UP(LOW_TSE,CAP_TSE)
+#define RU_CHE  UP(LOW_CHE,CAP_CHE)
+#define RU_SHA  UP(LOW_SHA,CAP_SHA)
+#define RU_SHCH UP(LOW_SHCHA,CAP_SHCHA)
+#define RU_HARD UP(LOW_HARD,CAP_HARD)
+#define RU_YERU UP(LOW_YERU,CAP_YERU)
+#define RU_SOFT UP(LOW_SOFT,CAP_SOFT)
+#define RU_E    UP(LOW_E,CAP_E)
+#define RU_YU   UP(LOW_YU,CAP_YU)
+#define RU_YA   UP(LOW_YA,CAP_YA)
+#define RU_YO   UP(LOW_IO,CAP_IO)
 
 enum unicode_names { 
     AE, AG, HG, CU, FE, SN, PB, UNS, NPN, PLT,
     ARIES, TAURUS, GEMINI, CANCER, LEO, VIRGO, LIBRA, SCORPIO, SAGITTARIUS, CAPRICORN, AQUARIUS, PISCES,
     CJT, SEXTILE, SQUARE, TRINE, OPPOSITE, N_NODE, S_NODE,
     EN_DASH, EM_DASH,
-    YO_LOW, YO_CAP
+    CAP_A, LOW_A, CAP_BE, LOW_BE, CAP_VE, LOW_VE, CAP_GHE, LOW_GHE, CAP_DE, LOW_DE, CAP_IE, LOW_IE, CAP_ZHE, LOW_ZHE, CAP_ZE, LOW_ZE, CAP_I, LOW_I, CAP_SHORT_I, LOW_SHORT_I, CAP_KA, LOW_KA, CAP_EL, LOW_EL, CAP_EM, LOW_EM, CAP_EN, LOW_EN, CAP_O, LOW_O, CAP_PE, LOW_PE, CAP_ER, LOW_ER, CAP_ES, LOW_ES, CAP_TE, LOW_TE, CAP_U, LOW_U, CAP_EF, LOW_EF, CAP_HA, LOW_HA, CAP_TSE, LOW_TSE, CAP_CHE, LOW_CHE, CAP_SHA, LOW_SHA, CAP_SHCHA, LOW_SHCHA, CAP_HARD, LOW_HARD, CAP_YERU, LOW_YERU, CAP_SOFT, LOW_SOFT, CAP_E, LOW_E, CAP_YU, LOW_YU, CAP_YA, LOW_YA, CAP_IO, LOW_IO
 };
 
 const uint32_t PROGMEM unicode_map[] = {
@@ -68,8 +100,72 @@ const uint32_t PROGMEM unicode_map[] = {
     [S_NODE]        = 0x260B,   // ☋
     [EN_DASH]       = 0x2013,   // –
     [EM_DASH]       = 0x2014,   // —
-    [YO_LOW]        = 0x0451,   // ё
-    [YO_CAP]        = 0x0401    // Ё
+    [CAP_A]         = 0x0410,   // А
+    [CAP_BE]        = 0x0411,   // Б
+    [CAP_VE]        = 0x0412,   // В
+    [CAP_GHE]       = 0x0413,   // Г
+    [CAP_DE]        = 0x0414,   // Д
+    [CAP_IE]        = 0x0415,   // Е
+    [CAP_ZHE]       = 0x0416,   // Ж
+    [CAP_ZE]        = 0x0417,   // З
+    [CAP_I]         = 0x0418,   // И
+    [CAP_SHORT_I]   = 0x0419,   // Й
+    [CAP_KA]        = 0x041A,   // К
+    [CAP_EL]        = 0x041B,   // Л
+    [CAP_EM]        = 0x041C,   // М
+    [CAP_EN]        = 0x041D,   // Н
+    [CAP_O]         = 0x041E,   // О
+    [CAP_PE]        = 0x041F,   // П
+    [CAP_ER]        = 0x0420,   // Р
+    [CAP_ES]        = 0x0421,   // С
+    [CAP_TE]        = 0x0422,   // Т
+    [CAP_U]         = 0x0423,   // У
+    [CAP_EF]        = 0x0424,   // Ф
+    [CAP_HA]        = 0x0425,   // Х
+    [CAP_TSE]       = 0x0426,   // Ц
+    [CAP_CHE]       = 0x0427,   // Ч
+    [CAP_SHA]       = 0x0428,   // Ш
+    [CAP_SHCHA]     = 0x0429,   // Щ
+    [CAP_HARD]      = 0x042A,   // Ъ
+    [CAP_YERU]      = 0x042B,   // Ы
+    [CAP_SOFT]      = 0x042C,   // Ь
+    [CAP_E]         = 0x042D,   // Э
+    [CAP_YU]        = 0x042E,   // Ю
+    [CAP_YA]        = 0x042F,   // Я
+    [CAP_IO]        = 0x0401,   // Ё
+    [LOW_A]         = 0x0430,   // а
+    [LOW_BE]        = 0x0431,   // б
+    [LOW_VE]        = 0x0432,   // в
+    [LOW_GHE]       = 0x0433,   // г
+    [LOW_DE]        = 0x0434,   // д
+    [LOW_IE]        = 0x0435,   // е
+    [LOW_ZHE]       = 0x0436,   // ж
+    [LOW_ZE]        = 0x0437,   // з
+    [LOW_I]         = 0x0438,   // и
+    [LOW_SHORT_I]   = 0x0439,   // й
+    [LOW_KA]        = 0x043A,   // к
+    [LOW_EL]        = 0x043B,   // л
+    [LOW_EM]        = 0x043C,   // м
+    [LOW_EN]        = 0x043D,   // н
+    [LOW_O]         = 0x043E,   // о
+    [LOW_PE]        = 0x043F,   // п
+    [LOW_ER]        = 0x0440,   // р
+    [LOW_ES]        = 0x0441,   // с
+    [LOW_TE]        = 0x0442,   // т
+    [LOW_U]         = 0x0443,   // у
+    [LOW_EF]        = 0x0444,   // ф
+    [LOW_HA]        = 0x0445,   // х
+    [LOW_TSE]       = 0x0446,   // ц
+    [LOW_CHE]       = 0x0447,   // ч
+    [LOW_SHA]       = 0x0448,   // ш
+    [LOW_SHCHA]     = 0x0449,   // щ
+    [LOW_HARD]      = 0x044A,   // ъ
+    [LOW_YERU]      = 0x044B,   // ы
+    [LOW_SOFT]      = 0x044C,   // ь
+    [LOW_E]         = 0x044D,   // э
+    [LOW_YU]        = 0x044E,   // ю
+    [LOW_YA]        = 0x044F,   // я
+    [LOW_IO]        = 0x0451    // ё
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -77,11 +173,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB, KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,   KC_Y,   KC_U,   KC_I,   KC_O,   KC_P,   KC_BSPC,
         KC_ESC, KC_A,   KC_S,   KC_D,   KC_F,   KC_G,   KC_H,   KC_J,   KC_K,   KC_L,   KC_SCLN,KC_QUOT,
         KC_LSFT,KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,KC_ENT,
-        PAD,    KC_LCTL,KC_LGUI,KC_LALT,LOWER,  VIM,    KC_SPC, RAISE,  ALT_GUI,GUI_SFT,CTL_ALT,RUSKI
+        PAD,    KC_LCTL,KC_LGUI,KC_LALT,LOWER,  VIM,    KC_SPC, RAISE,  ALT_GUI,GUI_SFT,CTL_ALT,KC_CAPS
     ),
     [_LOWER] = LAYOUT_planck_grid(
         KC_TILD,KC_EXLM,KC_AT,  KC_HASH,KC_DLR, KC_PERC,KC_CIRC,KC_AMPR,KC_ASTR,KC_LPRN,KC_RPRN,KC_DEL,
-        KC_CAPS,KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_F6,  KC_UNDS,KC_PLUS,KC_LCBR,KC_RCBR,KC_PIPE,
+        RUSKI,  KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_F6,  KC_UNDS,KC_PLUS,KC_LCBR,KC_RCBR,KC_PIPE,
         _______,KC_F7,  KC_F8,  KC_F9,  KC_F10, KC_F11, KC_F12, _______,_______,_______,_______,_______,
         _______,_______,_______,_______,_______,_______,_______,ADJUST, SID,    KC_VOLD,KC_VOLU,_______
     ),
@@ -92,15 +188,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,_______,_______,OPT_UTF,ADJUST, _______,_______,_______,_______,_______,_______,_______
     ),
     [_RUSKI] = LAYOUT_planck_grid(
-        RU_SHTI,RU_TSE, RU_U,   RU_KA,  TD(YEYO),RU_EN, RU_GHE, RU_SHA, RU_SHCH,RU_ZE,  RU_HA,  _______,
+        RU_SHTI,RU_TSE, RU_U,   RU_KA,  RU_IE,  RU_EN, RU_GHE, RU_SHA,  RU_SHCH,RU_ZE,  RU_HA,  _______,
         _______,RU_EF,  RU_YERU,RU_VE,  RU_A,   RU_PE,  RU_ER,  RU_O,   RU_EL,  RU_DE,  RU_ZHE, RU_E,
-        _______,RU_YA,  RU_CHE, RU_ES,  RU_EM,  RU_I,   RU_TE,  RU_SOFT,RU_BE,  RU_YU,  RU_DOT, _______,
-        _______,_______,_______,_______,LOWER,  _______,_______,RAISE,  _______,_______,_______,RUSKI
+        _______,RU_YA,  RU_CHE, RU_ES,  RU_EM,  RU_I,   RU_TE,  RU_SOFT,RU_BE,  RU_YU,  KC_DOT, _______,
+        _______,_______,_______,_______,LOWER,  _______,_______,RAISE,  _______,_______,_______,_______
     ),
     [_UTF] = LAYOUT_planck_grid(
-        _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,       
+        _______,_______,_______,_______,RU_YO,  _______,_______,_______,_______,_______,_______,_______,       
         _______,_______,_______,_______,_______,_______,_______,DASHES, _______,_______,_______,_______,      
-        _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,      
+        _______,_______,_______,_______,_______,_______,_______,RU_HARD,_______,_______,_______,_______,      
         _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______       
     ),
     [_SIDER] = LAYOUT_planck_grid(
@@ -128,14 +224,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______,_______
     )
 };
-
-// Tap Dance declarations
-enum {
-    YEYO
-};
-
-// Tap Dance definitions
-tap_dance_action_t tap_dance_actions [] = {
-    // Tap once for Е, tap twice for Ё
-    [YEYO] = ACTION_TAP_DANCE_DOUBLE(RU_IE, RU_YO)
-}
